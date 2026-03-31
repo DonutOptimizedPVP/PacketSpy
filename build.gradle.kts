@@ -1,5 +1,5 @@
 plugins {
-    id ("fabric-loom") version "1.7-SNAPSHOT"
+    id ("fabric-loom") version "1.10-SNAPSHOT"
     id ("maven-publish")
     kotlin("jvm") version "2.3.20"
 }
@@ -10,7 +10,7 @@ group = "net.vnnhattruongneee"
 repositories {
     maven("https://maven.shedaniel.me/") // Cloth Config
     maven("https://maven.terraformersmc.com/releases/") // ModMenu
-    
+
 }
 
 dependencies {
@@ -33,6 +33,12 @@ tasks.processResources {
     inputs.property("version", project.version)
     filesMatching("fabric.mod.json") {
         expand("version" to project.version)
+    }
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    kotlinOptions {
+        jvmTarget = "21"
     }
 }
 
