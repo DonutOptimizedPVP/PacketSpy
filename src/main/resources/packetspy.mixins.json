@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "net.vnnhattruongneee.packetspy.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ClientConnectionMixin",
+    "ClientPacketListenerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

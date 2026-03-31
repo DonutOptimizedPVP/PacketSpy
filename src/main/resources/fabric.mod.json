@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "packetspy",
+  "version": "${version}",
+  "name": "PacketSpy",
+  "description": "A lightweight, strictly client-side technical utility mod for Minecraft 1.21.5+ (Fabric) to monitor, filter, and analyze real-time network packets.",
+  "authors": [ "vnnhattruongneee" ],
+  "license": "GPL-3.0-only",
+  "environment": "client",
+  "entrypoints": {
+    "client": [ "net.vnnhattruongneee.packetspy.PacketSpyClient" ],
+    "modmenu": [ "net.vnnhattruongneee.packetspy.compat.ModMenuCompat" ]
+  },
+  "mixins": [ "packetspy.mixins.json" ],
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "minecraft": ">=1.21.5",
+    "java": ">=21",
+    "fabric-api": "*",
+    "fabric-language-kotlin": "*",
+    "cloth-config": "*",
+    "modmenu": "*"
+  }
+}
